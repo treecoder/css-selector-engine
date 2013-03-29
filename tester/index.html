@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+	<title>Elfin Tester</title>
+	
+	<style type='text/css'>
+		body {
+			width: 900px; margin: 10px auto;
+			border: 2px solid #CDCDCD;
+			padding: 0;
+			font-family: Georgia, Times New Roman Times, Serif;
+		}
+		#heading {
+			margin: 0;
+			padding: 10px;
+			background-color: #AAAAAA;
+			color: #EEEEEE;
+		}
+		#control-block {
+			border: 1px solid #EEEEEE;
+			margin: 10px;
+			padding: 10px;
+		}
+		#control-block ul {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+		}
+		#control-block li { display: inline; }
+		#control-block li a {
+			display: inline-block;
+			text-decoration: none;
+			padding: 0;
+			margin-right: 25px;
+			font-size: 1.25em;
+			color: #A97542;
+		}
+		#control-block li a.normal { }
+		#control-block li a.active { font-weight: bold; text-decoration: underline; }
+		.mod {
+			display: none;
+			border: 1px solid #EEEEEE;
+			margin: 10px;
+			padding: 10px;
+		}
+		#parse-input-text, #btn-parse-input-go,
+		#get-input-text, #btn-get-input-go		{
+			font-size: 1.5em;
+			font-family: Monaco, "Lucida Console", monospace;
+		}
+		.parsed-output-code {
+			display: inline-block;
+			border: 1px solid #397A3C;
+			margin: 10px;
+			padding: 10px;
+			background-color: #D7FFD2;
+		}
+		#output-table {
+			margin-top: 10px;
+		}
+		#output-table td {
+			border: 3px solid #8FBF98;
+			width: 300px;
+			padding: 5px;
+			text-align: center;
+			font-family: monaco, "Lucida Console", monospace;
+			font-size: 1.25em;
+		}
+		#output-table td.ot-total-cell {
+			background-color: #D3D3D3;
+		}
+		#output-table td.ot-id-cell {
+			background-color: #B8CDEA;
+		}
+		#output-table td.ot-class-cell {
+			background-color: #EAE29D;
+		}
+		#info-table td {
+			border: 1px solid #EEEEEE;
+			padding: 5px;
+			font-family: monaco, "Lucida Console", monospace;
+			font-size: 1.25em;
+		}
+		#info-table .it-info-cell { width: 500px; }
+		#info-table .it-api-true { background-color: #8CE69A; }
+		#info-table .it-api-false { background-color: #EBB3B3; }
+		#info-table .it-bug-true { background-color: #F84646; color: #FFFFFF; }
+		#info-table .it-bug-false { background-color: #D4FCCA; }
+	</style>
+	
+</head>
+<body>
+	<h1 id='heading'>Elfin Testor</h1>
+	
+	<div id="control-block">
+		<ul>
+			<li><a href="#" id="btn-mod-info">Info</a></li>
+			<li><a href="#" id="btn-mod-parse">Parse Test</a></li>
+			<li><a href="#" id="btn-mod-get">Get Test</a></li>
+		</ul>
+	</div>
+	
+	<div id="mod-info" class="mod"></div>
+	
+	<div id="mod-parse" class="mod">
+		<div id="parse-input">
+			<input type="text" id="parse-input-text" size="50">
+			<input type="button" id="btn-parse-input-go" value="Go">
+		</div>
+		<div id="parse-output"></div>
+	</div>
+	
+	<div id="mod-get" class="mod">
+		<div id="get-input">
+			<input type="text" id="get-input-text" size="50">
+			<input type="button" id="btn-get-input-go" value="Go">
+		</div>
+		
+		<div id="get-output"></div>
+	</div>
+	
+	<!-- subject document -->
+	<iframe name="iframe-subject" id="iframe-subject" style="display:none;"
+			frameborder="0" width="100" height="100" src='subject.html'>
+	</iframe>
+	
+	<!-- Elfin -->
+	<script type='text/javascript' src='../src/init.js'></script>
+	<script type='text/javascript' src='../src/parse.js'></script>
+	<script type='text/javascript' src='../src/get.js'></script>
+	<script type='text/javascript' src='../src/last.js'></script>
+	
+	<!-- base -->
+	<script type='text/javascript' src='base.js'></script>
+	
+</body>
+</html>

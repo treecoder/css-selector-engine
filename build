@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo building Elfin...
+
+echo '' > elfin.js
+cat ./src/init.js >> elfin.js
+cat ./src/parse.js >> elfin.js
+cat ./src/get.js >> elfin.js
+cat ./src/last.js >> elfin.js
+
+echo dome building elfin.js
