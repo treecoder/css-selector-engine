@@ -17,11 +17,6 @@ directory into a blank file in the order: init.js, parse.js, get.js, last.js.
 Save it as elfin.js.
 
 
-Optimize
---------------------------------------------------
-Minify using YUI Compressor or something else you like.
-
-
 Usage
 --------------------------------------------------
 To get an array of elements corresponding toa CSS3 selector, do
@@ -41,6 +36,10 @@ Test
 --------------------------------------------------
 For experimenting with Elfin, you don't need to build it. Just
 run the tester app.
+
+TODO
+--------------------------------------------------
+use Grunt build system
 
 
 
